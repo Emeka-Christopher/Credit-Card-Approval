@@ -5,12 +5,6 @@ import numpy as np
 # loading the trained model
 pickle_in = open('~/loan prediction project/trained_model.sav', 'rb') 
 classifier = pickle.load(pickle_in)
-
-
-header = st.beta.container()
-
-
-@st.cache()
   
 # defining the function which will make the prediction using the data which the user inputs 
 def prediction(input_data):   
