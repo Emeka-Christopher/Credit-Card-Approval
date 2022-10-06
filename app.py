@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pickle
+import sklearn
 
 st.title('Welcome to my credit Approval Project')
 
@@ -44,7 +45,7 @@ def main():
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"): 
         result = prediction([[Male, Age, Debt, Married, EducationLevel, Ethnicity,YearsEmployed, PriorDefault,Employed, CreditScore, Citizen, Income]]) 
-        st.success('Your loan is {}'.format(result))
+        st.success('Your credit card application is {}'.format(result))
         
 
 if __name__=='__main__': 
